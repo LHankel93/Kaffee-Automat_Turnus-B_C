@@ -1,0 +1,2 @@
+def uwu():
+    print("UwU")
