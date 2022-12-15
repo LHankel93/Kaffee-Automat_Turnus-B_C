@@ -26,10 +26,9 @@ class Kasse:
 
     # LH eine Möglichkeit um gespeichertes Wechselgeld aufzurufen
     def lade_wechselgeld(self):
-        file = Path("./wechselgeld.txt")
-        if file.is_file():
-            file = open("./wechselgeld.txt", "r")
-
+        path = Path("./wechselgeld.txt")
+        if path.is_file():
+            file = open(path, "r")
             w = Decimal(file.readline())
             self.__wechselgeld = float(w)
             file.close()
