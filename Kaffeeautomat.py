@@ -1,6 +1,8 @@
 # import <Dateiname ohne Endung>
 # Bei Zutatart bin ich mir nicht 100% sicher, aber laut UML ist's wohl nötig. LH
-import Angebot, Kasse, Zutatart
+from Angebot import Angebot
+from Kasse import Kasse
+from Zutatart import Zutatart
 # Aufruf von fremder Datei-Methode mit <Dateiname Ohne Endung>.<Methodenname>
 # Kurze Verschiebung von KaffeeautomatSim zu dieser Klasse nach eingehender Betrachtung des UML Diagramms.
 

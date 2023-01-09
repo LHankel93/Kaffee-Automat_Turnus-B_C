@@ -1,6 +1,6 @@
 # LH RezeptTeil Klasse
 # Nötiger Import sollte laut UML Zutatart sein.
-import Zutatart
+from Zutatart import Zutatart
 
 # LH Klasse RezeptTeil
 class RezeptTeil:
