@@ -11,10 +11,12 @@ class Kaffeeautomat:
     espresso = Zutatart("ESPRESSO", 1.00, 100) # Standardbestand 100
     heiße_milch = Zutatart("HEISSE MILCH", 1.00, 100)
     milchschaum = Zutatart("MILCHSCHAUM", 0.50, 100)
+    __angebote = []
     # LH Konstruktor für Kaffeeautomat
     def __init__(self) -> None:
-        self.__angebote = Angebot()
+        self.__angebote.append(Angebot("ESPRESSO"))
         self.__kasse = Kasse()
+        
     
     # LH Setter für angebote
     def set_angebote(self, angebote):
