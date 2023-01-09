@@ -7,6 +7,6 @@ import Kaffeeautomat
 
 def kaffeeautomat():
     print("Starte den Kaffeeautomaten.")
-    pass
+    Kaffeeautomat( )
 
 kaffeeautomat()
