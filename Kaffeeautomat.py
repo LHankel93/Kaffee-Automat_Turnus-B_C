@@ -8,10 +8,13 @@ from Zutatart import Zutatart
 
 # LH Kaffeeautomat Klasse
 class Kaffeeautomat:
+    espresso = Zutatart("ESPRESSO", 1.00, 100) # Standardbestand 100
+    heiße_milch = Zutatart("HEISSE MILCH", 1.00, 100)
+    milchschaum = Zutatart("MILCHSCHAUM", 0.50, 100)
     # LH Konstruktor für Kaffeeautomat
-    def __init__(self, angebote, kasse) -> None:
-        self.__angebote = angebote
-        self.__kasse = kasse
+    def __init__(self) -> None:
+        self.__angebote = Angebot()
+        self.__kasse = Kasse()
     
     # LH Setter für angebote
     def set_angebote(self, angebote):

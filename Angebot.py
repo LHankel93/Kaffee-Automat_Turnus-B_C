@@ -21,6 +21,7 @@ class Angebot:
         2 x heiße Milch + 1 x Milchschaum
         + 1 x Espresso
         """
+        # LH Switch Case nach obigen Rezepten
         match bezeichner.upper():
             case "ESPRESSO":
                 self.__rezept.append(RezeptTeil("ESPRESSO", 1))
