@@ -1,10 +1,12 @@
 # LH Nötige Imports sollte nur RezeptTeil sein laut UML
-import RezeptTeil
+from RezeptTeil import RezeptTeil
 
 # LH Angebot Klasse
 class Angebot:
+    __bezeichner = "Test"
+    __rezept = []
     # LH Konstruktor für Angebot Klasse
-    def __init__(self, bezeichner, rezept=[]):
+    def __init__(self, bezeichner:str):
         self.__bezeichner = bezeichner
         # RezeptTeile einpflegen in Liste Rezept
         """ 
@@ -21,26 +23,20 @@ class Angebot:
         """
         match bezeichner.upper():
             case "ESPRESSO":
-                self.__rezept.append(RezeptTeil().__init__("ESPRESSO"))
-                pass
+                self.__rezept.append(RezeptTeil().__init__("ESPRESSO"), 1)
             case "ESPRESSO MACCHIATO":
-                self.__rezept.append(RezeptTeil().__init__("ESPRESSO"))
-                self.__rezept.append(RezeptTeil().__init__("MILCHSCHAUM"))
-                pass
+                self.__rezept.append(RezeptTeil().__init__("ESPRESSO"), 1)
+                self.__rezept.append(RezeptTeil().__init__("MILCHSCHAUM"), 1)
             case "CAPPUCCINO":
-                self.__rezept.append(RezeptTeil().__init__("ESPRESSO"))
-                self.__rezept.append(RezeptTeil().__init__("HEISSE MILCH"))
-                self.__rezept.append(RezeptTeil().__init__("MILCHSCHAUM"))
-                self.__rezept.append(RezeptTeil().__init__("MILCHSCHAUM"))
-                pass
+                self.__rezept.append(RezeptTeil().__init__("ESPRESSO"), 1)
+                self.__rezept.append(RezeptTeil().__init__("HEISSE MILCH"), 1)
+                self.__rezept.append(RezeptTeil().__init__("MILCHSCHAUM"), 2)
             case "CAFE LATTE":
-                self.__rezept.append(RezeptTeil().__init__("HEISSE MILCH"))
-                self.__rezept.append(RezeptTeil().__init__("HEISSE MILCH"))
-                self.__rezept.append(RezeptTeil().__init__("MILCHSCHAUM"))
-                self.__rezept.append(RezeptTeil().__init__("ESPRESSO"))
-                pass
+                self.__rezept.append(RezeptTeil().__init__("HEISSE MILCH"), 2)
+                self.__rezept.append(RezeptTeil().__init__("MILCHSCHAUM"), 1)
+                self.__rezept.append(RezeptTeil().__init__("ESPRESSO"), 1)
 
-        self.__rezept = rezept
+        #self.__rezept = rezept
 
     # LH Setter für bezeichner
     def set_bezeichner(self, bezeichner):
